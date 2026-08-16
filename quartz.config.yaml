@@ -1,12 +1,12 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Moodle Start
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: en-US
+  locale: ru-RU
   baseUrl: moodlestart.ru
   ignorePatterns:
     - private
@@ -159,6 +159,8 @@ plugins:
     enabled: true
   - source: "@quartz-community/explorer"
     enabled: true
+    options:
+      title: Содержание
     layout:
       position: left
       priority: 50
@@ -214,6 +216,11 @@ plugins:
       group: toolbar
   - source: "@quartz-community/breadcrumbs"
     enabled: true
+    options:
+      spacerSymbol: "❯"
+      rootName: Главная
+      resolveFrontmatterTitle: true
+      showCurrentPage: true
     layout:
       position: beforeBody
       priority: 5
